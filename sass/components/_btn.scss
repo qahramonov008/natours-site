@@ -35,7 +35,7 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.537);
   }
 
-  &-white {
+  &--white {
     background-color: $color-white;
     color: $color-grey-dark;
 
@@ -44,8 +44,9 @@
     }
   }
 
-  &-animation {
+  &--animation {
     animation: moveInBottom 1s ease-out 1s;
     animation-fill-mode: backwards;
   }
 }
+
