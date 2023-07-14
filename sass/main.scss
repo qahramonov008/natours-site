@@ -1,9 +1,14 @@
+@import "./abstracts/mixins";
 @import "./abstracts/variables";
 
 @import './base/animations';
 @import "./base/base";
 @import './base/typographfy';
+@import './base/utilities';
 
 @import './components/btn';
 
+@import './layout/grid';
 @import './layout/header';
+
+@import './pages/home';

@@ -1,6 +1,11 @@
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
 .heading-primary {
   color: $color-white;
-  text-transform: uppercase;
   margin-bottom: 6rem;
 
   &--main {
@@ -17,5 +22,38 @@
     font-weight: 700;
     letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-in-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 1rem rgba($color-black, 0.3);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
