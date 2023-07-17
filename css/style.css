@@ -72,10 +72,10 @@ h3 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.2s ease-in-out; }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+    text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.1); }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -134,6 +134,24 @@ h3 {
   .btn--animation {
     animation: moveInBottom 1s ease-out 1s;
     animation-fill-mode: backwards; }
+
+.btn-text {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1.5px solid #55c57a;
+  padding: 6px;
+  transition: all .2s ease-in-out; }
+  .btn-text:hover {
+    background-color: #55c57a;
+    color: #fff;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px); }
+  .btn-text:active {
+    transform: translateY(0);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15); }
 
 .row {
   max-width: 114rem;
