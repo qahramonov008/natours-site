@@ -384,6 +384,64 @@ h3 {
     opacity: 0;
     transition: opacity 0.3s; }
 
+.popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(1rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s; }
+  .popup__content {
+    width: 75%;
+    display: table;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(0.2);
+    transition: 0.4s 0.3s;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4); }
+  .popup__left {
+    display: table-cell;
+    width: 33.33333%; }
+  .popup__right {
+    padding: 0 5rem;
+    display: table-cell;
+    width: 66.66667%;
+    vertical-align: middle; }
+  .popup__img {
+    width: 100%;
+    display: block; }
+  .popup__text {
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    line-height: 1;
+    right: 2.5rem;
+    text-decoration: none;
+    transition: color .3s;
+    font-size: 3rem; }
+    .popup__close:hover {
+      color: #55c57a; }
+
 .story {
   background-color: rgba(255, 255, 255, 0.7);
   width: 75%;
@@ -410,11 +468,11 @@ h3 {
     transition: all .5s; }
   .story__caption {
     font-size: 1.7rem;
-    position: absolute;
     text-transform: uppercase;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     color: #fff;
     transition: all 0.5s;
@@ -504,9 +562,113 @@ h3 {
     height: 3.5rem; }
   .header__text-box {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+.navigation__button {
+  text-align: center;
+  position: fixed;
+  background: #fff;
+  height: 7rem;
+  width: 7rem;
+  z-index: 2000;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer; }
+
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  z-index: 1000;
+  position: fixed;
+  transition: transform 1s;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  border-radius: 50%;
+  top: 6.5rem;
+  right: 6.5rem; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(70); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__nav {
+  position: fixed;
+  height: 100vh;
+  width: 0%;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  transition: all 0.8s;
+  opacity: 0; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link {
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: all 0.5s;
+  background-image: linear-gradient(120deg, transparent 50%, white 50%);
+  background-size: 230%; }
+  .navigation__link:hover {
+    background-position: 100%;
+    color: #55c57a;
+    transform: translateX(1rem); }
+
+.navigation__icon {
+  margin-top: 3.4rem;
+  position: relative; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navigation__icon::before {
+    top: -0.8rem; }
+  .navigation__icon::after {
+    top: 0.8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
 
 .section-about {
   background-color: #f7f7f7;
