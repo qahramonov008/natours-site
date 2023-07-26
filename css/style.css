@@ -1,3 +1,18 @@
+/*
+  0 - 600px : Phone
+  601-900px: Tablet portrait
+  901 - 1200px: Tablet Landscape
+  1201 - 1800px : Is our style
+  1800px < Big desktop
+*/
+/*
+  $breakpoint argument choice
+  - phone
+  -tab-port
+  -tab-land
+  -big-desktop
+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +50,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -50,6 +77,7 @@ h3 {
   text-transform: uppercase; }
 
 .heading-primary {
+  letter-spacing: .2rem;
   color: #fff;
   margin-bottom: 6rem; }
   .heading-primary--main {
@@ -66,6 +94,7 @@ h3 {
     animation: moveInRight 1s ease-in-out; }
 
 .heading-secondary {
+  letter-spacing: .2rem;
   font-size: 3.5rem;
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
