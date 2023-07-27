@@ -11,6 +11,16 @@
     border-radius: 50%;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -18,7 +28,7 @@
     height: 6rem;
     z-index: 1000;
     position: fixed;
-    transition: transform 1s;
+    transition: transform 0.7s;
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark
@@ -26,6 +36,15 @@
     border-radius: 50%;
     top: 6.5rem;
     right: 6.5rem;
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__checkbox {
@@ -48,7 +67,7 @@
     top: 0;
     left: 0;
     z-index: 1500;
-    transition: all 0.8s;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     opacity: 0;
   }
 
