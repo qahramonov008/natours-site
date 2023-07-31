@@ -59,7 +59,9 @@
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a href="#tour" class="btn btn--white btn--animation">Discover our tours</a>
+        <a href="#tour" class="btn btn--white btn--animation"
+          >Discover our tours</a
+        >
       </div>
     </header>
 
@@ -95,16 +97,22 @@
             <div class="composition">
               <img
                 src="./img/nat-1-large.jpg"
+                srcset="./img/nat-1.jpg 300w, ./img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
                 alt="Nature photo"
                 class="composition__photo composition__photo--p1"
               />
               <img
                 src="./img/nat-2-large.jpg"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                srcset="./img/nat-2.jpg 300w, ./img/nat-2-large.jpg 1000w"
                 alt="Nature photo"
                 class="composition__photo composition__photo--p2"
               />
               <img
                 src="./img/nat-3-large.jpg"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                srcset="./img/nat-3.jpg 300w, ./img/nat-3-large.jpg 1000w"
                 alt="Nature photo"
                 class="composition__photo composition__photo--p3"
               />
@@ -400,11 +408,21 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="./img/logo-green-2x.png"
-          alt="Footer logo"
-          class="footer__logo"
-        />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              ./img/logo-green-small-1x.png 1x,
+              ./img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 600px)"
+          />
+          <img
+            src="./img/logo-green-2x.png"
+            srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x"
+            alt="Footer logo"
+            class="footer__logo"
+          />
+        </picture>
       </div>
 
       <div class="row">

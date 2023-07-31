@@ -138,15 +138,24 @@ h3 {
 
 .mb-xl {
   margin-bottom: 8rem !important; }
+  @media (max-width: 900px) {
+    .mb-xl {
+      margin-bottom: 5rem !important; } }
 
 .mb-l {
   margin-bottom: 4rem !important; }
+  @media (max-width: 900px) {
+    .mb-l {
+      margin-bottom: 3rem !important; } }
 
 .mb-s {
   margin-bottom: 1.5rem !important; }
 
 .mt-xl {
   margin-top: 10rem !important; }
+  @media (max-width: 900px) {
+    .mt-xl {
+      margin-top: 5rem !important; } }
 
 .bg-video {
   width: 100%;
@@ -309,6 +318,40 @@ h3 {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 900px) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      overflow: hidden;
+      background-color: #fff; }
+      .card__side {
+        position: relative;
+        border-radius: 0;
+        height: auto;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__heading {
+        width: 50%; }
+      .card__details {
+        padding: 1rem 3rem; }
+      .card__price-value {
+        font-size: 4rem; } }
+  @media (max-width: 600px) {
+    .card__heading {
+      width: 60%; } }
 
 .composition {
   position: relative; }
@@ -322,17 +365,36 @@ h3 {
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
+      @media (max-width: 900px) {
+        .composition__photo--p1 {
+          top: 0;
+          transform: scale(1.2); } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
+      @media (max-width: 900px) {
+        .composition__photo--p2 {
+          top: -1rem;
+          transform: scale(1.3);
+          z-index: 100; } }
     .composition__photo--p3 {
       top: 10rem;
       left: 20%; }
+      @media (max-width: 900px) {
+        .composition__photo--p3 {
+          top: 1rem;
+          left: 0;
+          transform: scale(1.1); } }
     .composition__photo:hover {
       outline: 1.5rem solid #55c57a;
       transform: scale(1.05) translateY(-5px);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
+    @media (max-width: 900px) {
+      .composition__photo {
+        width: 33.3333%;
+        position: relative;
+        float: left; } }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
@@ -352,8 +414,14 @@ h3 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
+    @media (max-width: 900px) {
+      .feature-box__icon {
+        line-height: 1.2; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+  @media (max-width: 900px) {
+    .feature-box {
+      padding: 2rem; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -396,6 +464,10 @@ h3 {
 .form__radio-group {
   display: inline-block;
   width: 49.5%; }
+  @media (max-width: 600px) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 1rem; } }
 
 .form__radio-input {
   display: none; }
@@ -497,8 +569,17 @@ h3 {
   padding: 6rem;
   padding-left: 9rem;
   transform: skewX(-15deg); }
+  @media (max-width: 600px) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem;
+      transform: skew(0deg); } }
   .story > * {
     transform: skewX(15deg); }
+    @media (max-width: 600px) {
+      .story > * {
+        transform: skew(0deg); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -507,6 +588,9 @@ h3 {
     shape-outside: circle(50% at 50% 50%);
     position: relative;
     transform: translateX(-3rem) skewX(15deg); }
+    @media (max-width: 600px) {
+      .story__shape {
+        transform: translateX(-3rem) skew(0deg); } }
   .story__img {
     position: relative;
     height: 100%;
@@ -535,6 +619,9 @@ h3 {
   padding: 10rem 0;
   color: #f7f7f7;
   font-size: 1.4rem; }
+  @media (max-width: 900px) {
+    .footer {
+      padding: 5rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
@@ -635,6 +722,10 @@ h3 {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media (max-width: 600px) {
+    .header {
+      height: 85vh;
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -771,6 +862,10 @@ h3 {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin: -20vh 0 0 0; }
+  @media (max-width: 900px) {
+    .section-about {
+      padding: 20rem 0;
+      margin: -15vh 0 0 0; } }
 
 .section-features {
   padding: 20rem 0;
@@ -780,19 +875,31 @@ h3 {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+  @media (max-width: 900px) {
+    .section-features {
+      padding: 10rem 0; } }
 
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem;
   margin: -12rem 0 0 0; }
+  @media (max-width: 900px) {
+    .section-tours {
+      padding: 20rem 0; } }
 
 .section-stories {
   position: relative;
   padding: 15rem 0; }
+  @media (max-width: 900px) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   padding: 15rem 0; }
+  @media (max-width: 900px) {
+    .section-book {
+      padding: 10rem 0; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
@@ -802,3 +909,17 @@ h3 {
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 1200px) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 900px) {
+      .book__form {
+        width: 100%;
+        padding: 4rem; } }
+  @media (max-width: 1200px) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 65%, transparent 35%), url(../img/nat-10.jpg);
+      background-size: cover; } }
+  @media (max-width: 900px) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 100%, transparent 0%), url(../img/nat-10.jpg); } }

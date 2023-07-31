@@ -11,9 +11,17 @@
     font-size: 6rem;
     margin-bottom: 1.5rem;
     @include text-gradient;
+
+    @include respond(tab-port) {
+      line-height: 1.2;
+    }
   }
 
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem;
   }
 }

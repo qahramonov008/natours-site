@@ -1,19 +1,31 @@
-.text-center  {
-    text-align: center !important;
+.text-center {
+  text-align: center !important;
 }
 
 .mb-xl {
-    margin-bottom: 8rem !important;
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .mb-l {
-    margin-bottom: 4rem !important;
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .mb-s {
-    margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .mt-xl {
-    margin-top: 10rem !important;
+  margin-top: 10rem !important;
+
+  @include respond(tab-port) {
+    margin-top: 5rem !important;
+  }
 }
