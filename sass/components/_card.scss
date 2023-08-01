@@ -173,7 +173,7 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  @media (max-width: 900px), (hover: none) {
     height: auto;
     border-radius: 3px;
     overflow: hidden;
